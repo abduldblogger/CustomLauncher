@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_row_root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/app_row_margin">
@@ -17,8 +18,47 @@
         style="@style/TextViewNormal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_marginStart="@dimen/app_row_margin"
         android:layout_toEndOf="@id/app_row_img_app"
         tools:text="Google Chrome" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/app_row_tv_app_packageName"
+        style="@style/TextViewSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_row_tv_app_title"
+        android:layout_marginStart="@dimen/app_row_margin"
+        android:layout_toEndOf="@id/app_row_img_app"
+        tools:text="com.example" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/app_row_tv_app_main_activity"
+        style="@style/TextViewSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_row_tv_app_packageName"
+        android:layout_marginStart="@dimen/app_row_margin"
+        android:layout_toEndOf="@id/app_row_img_app"
+        tools:text="MainActivity" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/app_row_tv_app_version_code"
+        style="@style/TextViewSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_row_tv_app_main_activity"
+        android:layout_marginStart="@dimen/app_row_margin"
+        android:layout_toEndOf="@id/app_row_img_app"
+        tools:text="1" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/app_row_tv_app_version_name"
+        style="@style/TextViewSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_row_tv_app_version_code"
+        android:layout_marginStart="@dimen/app_row_margin"
+        android:layout_toEndOf="@id/app_row_img_app"
+        tools:text="1.0" />
 </RelativeLayout>
