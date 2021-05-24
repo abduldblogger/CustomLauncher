@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_row_margin">20dp</dimen>
+    <dimen name="app_row_tv_app_title_size">20sp</dimen>
+    <dimen name="app_row_img_app_size">50dp</dimen>
+</resources>

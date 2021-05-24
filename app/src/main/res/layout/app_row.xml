@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/app_row_margin">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/app_row_img_app"
+        android:layout_width="@dimen/app_row_img_app_size"
+        android:layout_height="@dimen/app_row_img_app_size"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/app_row_tv_app_title"
+        style="@style/TextViewNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/app_row_margin"
+        android:layout_toEndOf="@id/app_row_img_app"
+        tools:text="Google Chrome" />
+</RelativeLayout>
