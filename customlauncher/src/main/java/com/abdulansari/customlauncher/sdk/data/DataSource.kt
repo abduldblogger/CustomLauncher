@@ -4,6 +4,6 @@ import android.content.Context
 import com.abdulansari.customlauncher.sdk.data.model.AppInfo
 import io.reactivex.Single
 
-interface DataSource {
+internal interface DataSource {
     fun getInstalledApps(context: Context): Single<MutableList<AppInfo>>
 }

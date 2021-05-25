@@ -6,7 +6,7 @@ import com.abdulansari.customlauncher.sdk.data.DataSource
 import com.abdulansari.customlauncher.sdk.data.model.AppInfo
 import io.reactivex.Single
 
-object AppsManager {
+internal object AppsManager {
     private var appsDataSource: DataSource = AppsDataSource()
 
     fun getInstalledApps(context: Context): Single<MutableList<AppInfo>> {

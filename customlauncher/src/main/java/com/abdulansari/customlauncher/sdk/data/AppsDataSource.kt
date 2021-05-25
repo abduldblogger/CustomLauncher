@@ -6,7 +6,7 @@ import android.content.pm.PackageInfo
 import com.abdulansari.customlauncher.sdk.data.model.AppInfo
 import io.reactivex.Single
 
-class AppsDataSource : DataSource {
+internal class AppsDataSource : DataSource {
     override fun getInstalledApps(context: Context): Single<MutableList<AppInfo>> {
         val appsList: MutableList<AppInfo>?
         val pm = context.packageManager
