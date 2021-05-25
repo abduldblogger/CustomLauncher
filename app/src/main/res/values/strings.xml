@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CustomLauncher</string>
     <string name="error_fetching_apps">Error fetching apps!</string>
+    <string name="search_apps">Search Here…</string>
 </resources>

@@ -5,4 +5,5 @@
     <dimen name="app_row_tv_app_small_size">15sp</dimen>
     <dimen name="app_row_img_app_size">50dp</dimen>
     <dimen name="loader_size">100dp</dimen>
+    <dimen name="search_margin">10dp</dimen>
 </resources>

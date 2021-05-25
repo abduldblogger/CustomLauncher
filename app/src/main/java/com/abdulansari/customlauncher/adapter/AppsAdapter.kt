@@ -11,10 +11,10 @@ import kotlinx.android.synthetic.main.app_row.view.*
 
 
 class AppsAdapter(
-    private val context: Context,
-    private val appsList: List<AppInfo>
+    private val context: Context
 ) : RecyclerView.Adapter<AppsAdapter.ViewHolder>() {
     private var onItemClickListener: OnItemClickListener? = null
+    private var appsList = mutableListOf<AppInfo>()
 
     interface OnItemClickListener {
         fun onItemClicked(appInfo: AppInfo)
@@ -55,5 +55,11 @@ class AppsAdapter(
             holder.appVersionCode.text = appInfo.versionCode.toString()
             holder.rootView.setOnClickListener { onItemClickListener?.onItemClicked(appInfo) }
         }
+    }
+
+    fun setData(apps: List<AppInfo>) {
+        appsList.clear()
+        appsList.addAll(apps)
+        notifyDataSetChanged()
     }
 }

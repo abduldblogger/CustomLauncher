@@ -31,7 +31,7 @@ class CustomLauncherMain private constructor(private val context: Context?) {
 
     private fun onSuccess(appsList: MutableList<AppInfo>) {
         val sortedAppsList = appsList.sortedBy { appInfo -> appInfo.appName.toString() }
-        listener?.onInstalledAppsReceived(sortedAppsList)
+        listener?.onInstalledAppsReceived(sortedAppsList as MutableList<AppInfo>)
     }
 
     fun setOnListeners(launcherListener: LauncherListener) {
@@ -63,7 +63,7 @@ class CustomLauncherMain private constructor(private val context: Context?) {
     }
 
     interface LauncherListener {
-        fun onInstalledAppsReceived(appsList: List<AppInfo>)
+        fun onInstalledAppsReceived(appsList: MutableList<AppInfo>)
         fun onErrorFetchingApps(error: Throwable)
         fun onAppInstalledOrUninstalled()
     }
